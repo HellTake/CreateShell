@@ -1,0 +1,71 @@
+struct{
+    WORD e_magic = 0x5A4D;
+    WORD e_cblp = 0x90;
+    WORD e_cp = 0x3;
+    WORD e_cparhdr = 0x4;
+    WORD e_minalloc = 0x0;
+    WORD e_maxalloc = 0xFFFF;
+    WORD e_ss = 0x0;
+    WORD e_sp = 0xB8;
+    WORD e_csum = 0x0;
+    WORD e_ip = 0x0;
+    WORD e_cs = 0x0;
+    WORD e_lfarlc = 0x40;
+    WORD e_ovno = 0x0;
+    WORD e_res[4] = {0x0,0x0,0x0,0x0};
+    WORD e_oemid = 0x0;
+    WORD e_oeminfo = 0x0;
+    WORD e_res2[10] = {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0};
+    DWORD e_lfanew = 0x80;
+} NewDosHeader;
+struct{
+    DWORD Signature = 0x4550;
+} NewNTHeader;
+struct{
+	WORD Machine = 0x14C;
+	WORD NumberOfSection = 2;
+	DWORD TimeDateStamp = 0x61A5B1E1;
+    DWORD PointerToSymbolTable = 0x0;
+    DWORD NumberOfSymbols = 0;
+	WORD SizeOfOptionalHeader = 0xE0;
+	WORD Characteristics = 0x107;
+} NewFileHeader;
+struct{
+    WORD Magic = 0x10b;
+    DWORD SizeOfCode = 0;
+    DWORD SizeOfInitializedData = 0;
+    DWORD SizeOfUninitializedData = 0x0;
+    DWORD AddressOfEntryPoint = 0;
+    DWORD BaseOfCode = 0;
+    DWORD BaseOfData = 0;
+    DWORD ImageBase = 0x400000;
+    DWORD SectionAlignment = 0x1000;
+    DWORD FileAlignment = 0x200;
+    WORD MajorOperatingSystemVersion = 0x4;
+    WORD MinorOperatingSystemVersion = 0x0;
+    WORD MajorImageVersion = 0x1;
+    WORD MinorImageVersion = 0x0;
+    WORD MajorSubsystemVersion = 0x4;
+    WORD MinorSubsystemVersion = 0x0;
+    DWORD Win32VersionValue = 0x0;
+    DWORD SizeOfImage = 0x2000;
+    DWORD SizeOfHeaders = 0x400;
+    DWORD CheckSum = 0x0;
+    WORD Subsystem = 0x3;
+    WORD DllCharacteristics = 0x0;
+    DWORD SizeOfStackReserve = 0x100000;
+    DWORD SizeOfStackCommit = 0x1000;
+    DWORD SizeOfHeapReserve = 0x100000;
+    DWORD SizeOfHeapCommit = 0x1000;
+    DWORD LoaderFlags = 0x0;
+    DWORD NumberOfRvaAndSizes = 0x10;
+    IMAGE_DATA_DIRECTORY DataDirectory[16];
+}NewOptionHeader;
+ struct{
+     DWORD VirtualAddress = 0;
+     DWORD Size = 0;
+ } IAT;
+ struct{
+     DWORD VirtualAddress = 0;
+     DWORD Size = 0;
+ } TLS;

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1681288027 source:f:\project\c++\injection\windows\shell\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	<winternl.h>
+	<PEheaders.h>
+
+1681284349 f:\project\c++\injection\windows\shell\peheaders.h
+
